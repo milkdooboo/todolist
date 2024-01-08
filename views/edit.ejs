@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editlist</title>
+    <link rel="stylesheet" href="/edit.css">
+</head>
+
+<body>
+  <main>
+    <h1>Edit todo</h1>
+    <form action="/edit-todo" method="POST">
+      <div class="inputField">
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id" value="<%= todos[0].id %>" readonly > 
+      </div>
+      <div class="inputField">
+        <label for="content">바꿀 내용</label>
+        <input type="text" id="content" name="content" value="<%= todos[0].content %>"> 
+      </div>
+      <div class="inputField">
+        <input type="date" id="date" name="date" value="<%= todos[0].due_date.toISOString().slice(0, 10) %>">
+      </div>
+      <div class="inputField">
+        <input type="time" id="time" name="time" value="<%= todos[0].due_time %>">
+      </div>
+      <div class="inputField">
+        <button class="btn" type="submit" id="Updatebtn">Update</button>
+        <button class="btn">Cancel</button>
+      </div>
+      
+  
+    </form>
+  </main>
+</body>
+
+</html>

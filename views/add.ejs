@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addlist</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+    <main>
+        <h1>Add your list!</h1>
+        <div class="inputField">
+            <form action="/add-list" method="POST">
+                <input type="text" id="content" placeholder="할 일 추가하기" name="content" autofocus>
+                <p><input type="date" name="date"></p>
+                <p><input type="time" name="time"></p>
+                <button type="submit" id="addbtn">추가</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

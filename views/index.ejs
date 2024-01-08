@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div>
+        <header>To-Do List</header>
+        
+        <div class="all-lists">
+            <% if (!todos || todos.length == 0)  { %>
+                <p>No todos found - Maybe start creating some ? </p>
+            <% } else { %>
+                <ul>
+                    <% for (var i = 0; i < todos.length; i++) { %>
+                        <li>
+                            
+                            <%= todos[i].content %>
+                            <%= todos[i].due_date.getFullYear() + '년' + (todos[i].due_date.getMonth() + 1) + '월'
+                            + todos[i].due_date.getDate() + '일' %>
+                            <%= todos[i].due_time %>
+
+                            <form action="/edit-page/<%= todos[i].id %>" method="GET">
+                                <button id="Editbtn">편집</button>
+                            </form>
+                            
+                            <form action="/delete-list/<%= todos[i].id %>" method="POST">
+                                <button type="submit" id="Deletebtn">삭제</button>
+                            </form>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+        </div>
+
+        <div class="footer">
+            <form action="/all-clear-list" method="GET">
+                <button type="submit" id="allClearbtn">모두 삭제</button>
+            </form>
+            <form action="/add-list" method="GET">
+                <button type="submit" id="addPagebtn">추가하기 -></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
