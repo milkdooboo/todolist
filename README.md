@@ -28,7 +28,14 @@ I used mysql for Database.
    I made connection using createPool, and exported module.
 
 4. todo.js
-   I used express router, and exported module. 
+   I used express router, and exported module.
 
+
+What I learned from making my todo list : how to use api making my project, 
+                                          use database(mysql) : make tables, connent mysql with Node.js and some mysql commands( select, delete, insert, update)
+                                          uses of Node.js, express, and EJS
+                                          
+What was difficult for me( What I will study more about) : Dealing with request parameter and response parameter in my code was difficult first.
+                                                         use id, content, due_date, due_time for parameter and using it in api took a long time in my project.
   
    
